@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Mathpix
+Comment=Mathpix
+Icon=~/.appimages/icons/mathpix.png
+Exec=/home/fd/.appimages/Mathpix.AppImage
+Terminal=false
+Catagories=note
