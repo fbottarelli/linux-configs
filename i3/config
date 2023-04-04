@@ -178,7 +178,7 @@ bindsym $mod+Ctrl+h resize grow width 1 px or 1 ppt
 ######################################
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+q kill
@@ -323,7 +323,7 @@ set $ws10 "10"
 
 # bind program to workspace and focus to them on startup:
 # assign [class="Xfce4-terminal"] $ws1
-assign [class="(?i)firefox"] $ws2
+# assign [class="(?i)firefox"] $ws2
 assign [class="Thunar"] $ws3
 assign [class="thunderbird"] $ws4
 assign [class="TelegramDesktop"] $ws5
