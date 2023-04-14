@@ -1,2 +1,11 @@
 # second monitor
 xrandr --output HDMI-2 --mode 1920x1080 --right-of eDP-1
+# Vimium the Hack Browser Exstension map (same as i3 WM).
+unmap J
+unmap K
+unmap H
+unmap L
+map L nextTab
+map H previousTab
+map J goBack
+map K goForward

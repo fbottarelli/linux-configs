@@ -181,7 +181,7 @@ bindsym $mod+Ctrl+h resize grow width 1 px or 1 ppt
 bindsym $mod+Return exec alacritty
 
 # kill focused window
-bindsym $mod+q kill
+bindsym $mod+w kill
 
 # exit-menu
 bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
@@ -205,8 +205,8 @@ bindsym F1 exec ~/.config/i3/scripts/keyhint-2
 # bindsym $mod+F1 exec xed ~/.config/i3/keybindings
 
 # Backlight control
-bindsym XF86MonBrightnessUp exec brightnessctl set 10%+ && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
-bindsym XF86MonBrightnessDown exec brightnessctl set 10%- && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+ && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%- && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
 
 # change focus
 bindsym $mod+h focus left
@@ -281,7 +281,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 ## App shortcuts
-bindsym $mod+w exec /usr/bin/firefox
+# bindsym $mod+w exec /usr/bin/firefox
 bindsym $mod+n exec /usr/bin/thunar
 bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
@@ -493,6 +493,8 @@ set $mediumgrey		#8b8b8b
 set $yellowbrown	#e1b700
 set $giantsorange	#f05d23
 set $verdino		#27E1C1
+set $verde_militare 	#606c38
+set $rosa 	#cdb4db
 
 # define colors for windows:
 #class		        	border		bground		text		indicator	child_border
