@@ -9,3 +9,5 @@ map L nextTab
 map H previousTab
 map J goBack
 map K goForward
+# keyboard layouts  - how make dual layout and win+space to switch between them
+localectl --no-convert set-x11-keymap it,us pc105 "" grp:win_space_toggle
