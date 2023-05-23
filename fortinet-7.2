@@ -1,0 +1,36 @@
+Versione non ufficiale trovata nei comemnti di AUR fortinet-client-vpn
+- scarica il pacchetto AUR e sostiuisci il PKGBUILD with:
+```
+There is an new version (7.2) which works way better with SSO signins. Since for some reason this file is not listed on the fortinet repo i added it to another one.
+
+# Contributor: Jurgen <jurgen at insan3 dot nl>
+pkgname=forticlient_vpn
+pkgver=7.2.0.0644
+pkgrel=1
+pkgdesc="An fortinet sslvpn application"
+arch=('x86_64')
+url="https://www.forticlient.com"
+license=('custom')
+groups=()
+provides=(forticlient_vpn)
+depends=('libxss' 'libsecret' 'alsa-lib' 'libnotify' 'gtk3' 'nss' 'libxcrypt-compat' 'libappindicator-gtk2')
+backup=('etc/forticlient/config.db')
+options=('!strip' '!emptydirs')
+source=("http://mirror.previder.nl/deb/pool/main/${pkgname}_${pkgver}_amd64.deb")
+sha512sums=('a21047dc80d2af8578fee0196bac039401df7c6914b2527f3b6da9f0c1ab2875d2fc065f71e82ce729b6141228dc3d3af637eff3509dc209d8cbecf80ca3b0b8')
+
+package(){
+
+    # Extract package data
+    tar xf data.tar.xz -C "${pkgdir}"
+
+    # Fix directory structure differences
+    cd "${pkgdir}"
+
+    mkdir -p usr/lib 2> /dev/null; mv lib/* usr/lib; rm -rf lib
+    mkdir -p var/lib/forticlient
+
+    cd ..
+
+}
+```
