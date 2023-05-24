@@ -11,3 +11,5 @@ map J goBack
 map K goForward
 # keyboard layouts  - how make dual layout and win+space to switch between them
 localectl --no-convert set-x11-keymap it,us pc105 "" grp:win_space_toggle
+# extract zip in a subfolder with the basename
+unzip -d "$(basename -s .zip yourfile.zip)" yourfile.zip
